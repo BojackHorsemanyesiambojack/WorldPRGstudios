@@ -27,9 +27,12 @@
 
 @media (max-width:720px){
 
+    *{
+        overflow-x: hidden;
+    }
     #pub-space-1{
         flex-direction: column-reverse;
-        max-height: 350px;
+        max-height: 700pxpx;
     }
 
     body{
@@ -37,30 +40,56 @@
         width: 100%;
 
         .interactive-container{
-            width: 88%;
+            flex-direction: column;
+            width: auto;
             padding:0;
             height: auto;
             display: flex;
             border-radius: 0.4rem;
             background-color: rgb(20, 20, 20);
             z-index: 15;
-            align-items: start;
-            flex-direction: column;
-    
+            align-items: center;
+            justify-content: center;
+
             .content-left{
                 width:100%;
+                height: auto;
+                padding:0;
+                justify-content: center;
+                align-items: center;
+                .Title,button{
+                    justify-content: center;
+                }
+                gap:0;
+                
             }
             .content-right{
-                font-size: 0.6rem;
+                font-size: 0.8rem;
                 margin:0;
+                gap:0;
+                height: auto;
+                overflow: hidden;
+                padding:0;
+                display: flex;
+                h3{
+                    overflow: hidden;
+                    font-size: 1rem;
+                }
             }
 
         }
+    main{
+        width: 80%;
+    }
     }
     #principal-header{
         background-color: rgb(34, 32, 32);
         z-index:20;
         min-height: 6rem;
+        overflow-x: hidden;
+    }
+    .header-row{
+        overflow: hidden;
     }
 }
 
@@ -117,14 +146,18 @@ body{
                     margin: 0;
                 }
             }
+            .button-burger-container:hover{
+                cursor: pointer;
+                .button-burger{
+                    transition: 0.8 s all;
+                    background-color:rgb(12, 155, 180);
+                }
+            }
             }
 
             img{
                 width: auto;
                 height: auto;
-                @media (min-width:720px) {
-                    
-                }
                 min-width:65px;
                 min-height: 65px;
 
@@ -139,10 +172,16 @@ body{
             flex-direction: column;
             gap:4rem;
             padding-top: 7rem;
+            width: 100%;
 
             .general-text{
                 color:white;
                 font-family: "Barlow Semi Condensed", sans-serif;
+
+            }
+
+            .container-text-align{
+                margin-left: 3rem;
             }
         
             .general-container{
@@ -165,13 +204,14 @@ body{
                 background-size: cover;
                 background-repeat: no-repeat;
                 z-index:10 ;
+                padding:7rem;
             }
             .interactive-container{
-                width: 88%;
+                max-width: 88%;
+                width: auto;
                 height: auto;
                 display: flex;
                 border-radius: 0.4rem;
-                padding:5rem;
                 background-color: rgb(20, 20, 20);
                 z-index: 15;
         
@@ -184,7 +224,6 @@ body{
                         padding-left: 2rem;
                     }
                     padding-left:auto;
-                    margin-left:3rem;
                     margin-left:auto;
         
                     button{
@@ -225,6 +264,36 @@ body{
                 max-width: 280px;
                 max-height: 280px;
                 margin-right: 4rem;
+            }
+            .proyect-section{
+                width: 100%;
+                background-color: rgb(20, 20, 20);
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                gap:2rem;
+
+                .general-media-container{
+                    border:solid rgb(12, 155, 180) 2px;
+                    border-radius: 1rem;
+                    display: flex;
+
+                    .media-container-row{
+                        display: flex;
+                        justify-content: space-between;
+                        margin:1rem;
+                        .media-container{
+                            border:solid rgb(12, 155, 180) 2px;
+                            padding:0.7rem;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap:9rem;
+                            padding-bottom: 1rem;
+                        }
+                    }
+                }
             }
         }
         footer{
